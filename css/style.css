@@ -1,0 +1,39 @@
+.slider-container {
+	display: flex;
+	align-items: center;
+}
+
+.slider {
+	flex-grow: 1;
+}
+
+.slider-value {
+	font-size: x-large;
+	width: 70px;
+	padding-left: 8px;
+	padding-right: 8px;
+	text-align: center;
+}
+
+.confidence-number-container {
+	display: flex;
+}
+
+.confidence-number-container label {
+	padding: 0px 8px;
+}
+
+.calculator-output-container {
+	text-align: center;
+}
+
+.calculator-output-container .feather {
+	height: 36px;
+	width: 36px;
+	stroke-width: 2px;
+	margin-bottom: 10px;
+}
+
+.calculator-output-container h5 {
+	margin-bottom: 12px;
+}

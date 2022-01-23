@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<script defer src="./js/index.js" charset="utf-8" type="module"></script>
+		<link rel="stylesheet" href="./css/style.css" />
+		<link rel="stylesheet" href="./css/pico.min.css" />
+		<script src="https://unpkg.com/feather-icons"></script>
+		<title>Visual Failrate Calculator</title>
+	</head>
+	<body>
+		<main class="container">
+			<h1>Visual Failrate Calculator</h1>
+			<div class="grid">
+				<div class="slider-container">
+					<div class="slider">
+						<label for="entityCount">Total entity count</label>
+						<input
+							type="range"
+							min="0"
+							value="50"
+							max="1000"
+							id="entityCount"
+							name="entityCount"
+							class="slider-input"
+						/>
+					</div>
+					<b id="entityCountDisplay" class="slider-value">0</b>
+				</div>
+				<div class="slider-container">
+					<div class="slider">
+						<label for="failedEntityCount">Failed entity count</label>
+						<input
+							type="range"
+							min="0"
+							value="50"
+							max="1000"
+							id="failedEntityCount"
+							name="failedEntityCount"
+							class="slider-input"
+						/>
+					</div>
+					<b id="failedEntityCountDisplay" class="slider-value">0</b>
+				</div>
+				<div class="confidence-number-container">
+					<label for="lowerConfidence">
+						Lower confidence number
+						<input type="number" id="lowerConfidence" name="lowerConfidence" min="0" value="2" />
+					</label>
+					<label for="upperConfidence">
+						Upper confidence number
+						<input type="number" id="upperConfidence" name="upperConfidence" min="0" value="2" />
+					</label>
+				</div>
+			</div>
+			<div class="calculator-output-container">
+				<i data-feather="arrow-down"></i>
+				<h5>Is alarm triggered?: <em id="alarm-text"></em></h5>
+				<div>Confidence bounds: <em id="confidence-bounds-text"></em></div>
+			</div>
+		</main>
+		<script>
+			feather.replace();
+		</script>
+	</body>
+</html>
